@@ -55,7 +55,7 @@ public class Main {
         */
 
         //calculate width of a rectangle
-        double width = 0;
+        double width = 0; //initializing it with a 0 is redundant here;
         double height = 0;
         double area = 0;
 

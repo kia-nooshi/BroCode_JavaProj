@@ -5,8 +5,6 @@ public class Main {
         //weight conversion program
 
         //declare vars
-        double kgs;
-        double pounds;
 
         int option;
         double weight;

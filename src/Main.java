@@ -12,7 +12,7 @@ public class Main {
         temperature = scanner.nextDouble();
 
         System.out.print("Convert to Celsius or Fahrenheit? (C or F): ");
-        tempMeasurement = scanner.next().toLowerCase();; //can use method chaining to make it upper/lower case from here
+        tempMeasurement = scanner.next().toLowerCase(); //can use method chaining to make it upper/lower case from here
         //original line: tempMeasurement = scanner.next();
 
         //tempMeasurement = tempMeasurement.toLowerCase();

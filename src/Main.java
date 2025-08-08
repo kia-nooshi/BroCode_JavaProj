@@ -5,19 +5,32 @@ public class Main {
         //makes the methods more flexible, no need for overloaded methods
         //java will pakc the arguments into an array
         //...(ellipsis)
+        // 3 dots is called an ellipses java packs the arguments into an array
 
         //System.out.println(add(1,2,3));
-        System.out.println(add(1,2,3,4));
+        System.out.println(average(1,2,3,4));
 
     }
-    static int add(int... numbers){ // 3 dots is called an ellipses java packs the arguments into an array
-        int sum = 0;
 
-        for (int number: numbers){
-            sum += number;
+    static double average(double... numbers){ // 3 dots is called an ellipses java packs the arguments into an array
+        double sum = 0;
+        if (numbers.length == 0){
+            return 0;
         }
-        return sum;
+        for (double number: numbers){
+            sum+= number;
+        }
+
+        return sum / numbers.length;
     }
+//    static int add(int... numbers){
+//        int sum = 0;
+//
+//        for (int number: numbers){
+//            sum += number;
+//        }
+//        return sum;
+//    }
 
 //    static double add(int a, int b){
 //        return a + b;

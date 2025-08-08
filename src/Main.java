@@ -1,49 +1,69 @@
+import java.util.Scanner;
 public class Main {
+    static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args){
-        //2D array = An array where each element is an array
-        // Useful for storing a matrix of data
+        //Java Quiz Game
+        //Array of Questions[]
+        //Options array [][]
+        //Declare Variables
+        //Welcome Message
+        //Question(loop)
+        //      Options
+        //      Get Guess from user
+        //      Check our guess
+        //      Display Final Score
 
-//        String[] fruits = {"apple", "orange", "banana"};
-//        String[] vegetables = {"potato", "onion", "carrot"};
-//        String[] meats = {"chicken", "pork", "beef", "fish"};
-//
-//        //to combine all arrays you combine them into a grid or matrix
-//        String[][] groceries = {fruits, vegetables, meats};
-//
-//        //Works the same as above
-//        String[][] groceries = {{"apple", "orange", "banana"},
-//                                {"potato", "onion", "carrot"},
-//                                {"chicken", "pork", "beef", "fish"}};
-//
-//        //to change an element you need 2 indices
-//        //first index is row, second index is column
-//        groceries[0][0] = "pineapple";
-//        groceries[1][2] = "celery";
-//        groceries[2][1] = "eggs";
-//
-//
-//        //to display the data you need a nested loop
-//        for(String[] foods : groceries){
-//            for(String food : foods){
-//                System.out.print(food + " ");
-//            }
-//            System.out.println();
-//        }
+        String[] questions = {"What is the main function of a router?",
+                "Which part of the computer is considered the brain?",
+                "What year was facebook Launched?",
+                "Who is known as the father of computers",
+                "What was the first programming language?"};
+        String [][] options = {{"1. Storing files", "2. Encrypting data", "3. Directing internet traffic", "4. Manging passwords"},
+                {"1. CPU", "2. Hard Drive", "3. RAM", "4. GPU"},
+                {"1. 2000", "2. 2004", "3. 2006", "4. 2008"},
+                {"1. Steve Jobs", "2. Bill Gates", "3. Alan Turing", "4. Charles Babbage"},
+                {"1. COBOL", "2. C", "3. Fortran", "4. Assembly"}};
 
-        //printing a phone dialpad
-        char[][] telephone = {  {'1', '2', '3'},
-                                {'4', '5', '6'},
-                                {'7', '8', '9'},
-                                {'*', '0', '#'}};
+        int [] answers = {3, 1, 2, 4, 3};
+        int score = 0;
+        int guess;
 
-        for(char[] row: telephone){
-            for(char number: row){
-                System.out.print(number + " ");
-            }
-            System.out.println();
 
+        System.out.println("******************************");
+        System.out.println("Welcome to the Java Quiz Game!");
+        System.out.println("******************************");
+
+
+
+        for (int i = 0; i < questions.length; i++ ){
+                System.out.println(questions[i]);
+                for (String option : options[i]){ //loops through rows of options and outputs the columns
+                    System.out.println(option);
+                }
+                System.out.print("What is your guess: ");
+                guess = scanner.nextInt();
+                if (guess == answers[i]){
+                    System.out.println("********");
+                    System.out.println("CORRECT!");
+                    System.out.println("********");
+                    score +=1;
+                }else{
+                    System.out.println("********");
+                    System.out.println("WRONG :(");
+                    System.out.println("********");
+                }
+        }
+
+        System.out.printf("Your got %d/%d correct! \n", score, questions.length);
+        if (score == questions.length){
+            System.out.println("PERFECT SCORE!");
         }
 
 
+
+
+        scanner.close();
     }
+
+
 }

@@ -20,12 +20,12 @@ public class Main {
         //to print all values of an array you can use a for loop
         for(int i = 0; i < fruits.length; i++){
             System.out.println(fruits[i]);
-            System.out.print(fruits[i] + " ");
+            //System.out.print(fruits[i] + " ");
         }
 
         //enhanced for loop also called a for each loop
         for(String fruit : fruits){ //first fruit is the iterating var
-            System.out.print(fruit + ", ");
+            System.out.print(fruit + " ");
         }
 
 //        Arrays.sort(fruits); sorts the string array alphabetically
